@@ -1,0 +1,56 @@
+.skills-text {
+  color: #c9c5c5;
+}
+.skill-img {
+  transition: 0.5s;
+ max-height: 70px;
+ width: 100%;
+}
+.skill {
+  border: 1px solid #ff6347;
+  border-radius: 4px;
+  box-shadow: 0 0 10px #ff6347;
+  transition: 0.5s;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+.skill:hover .skill-img {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+.skill:hover {
+  animation: shadow 1s linear  infinite ;
+}
+
+@keyframes shadow {
+  0% {
+    box-shadow: 0 0 10px #ff6347;
+  }
+  50% {
+    box-shadow: 0 0 10px #000;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff6347;
+  }
+}
+.skill-con {
+  width: 70%;
+  margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .skill-con {
+    width: 100%;
+  }
+  .skill {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 576px) {
+
+ .skills-text {
+  font-size: .8rem;
+ }
+}
+

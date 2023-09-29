@@ -1,0 +1,28 @@
+.experience {
+    border: 1px solid #ff6347;
+    box-shadow: 0 0 10px #ff6347;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+li {
+    color: #c9c5c5;
+    font-size: clamp(.8rem, 3vw, 1rem);
+}
+.date{ 
+    color: #c9c5c5;
+    font-size: clamp(.7rem, 3vw, 1.5rem);
+    margin-top: -10px
+}
+.exp-title {
+    font-size: clamp(1rem , 3vw, 1.8rem);
+}
+.exp-text {
+    font-size: clamp(.8rem, 3vw, 1.5rem);
+}
+@media (max-width: 568px) {
+    .experience {
+        border: none;
+        box-shadow: none;
+}
+}

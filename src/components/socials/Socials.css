@@ -1,0 +1,21 @@
+.socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%, -50%);
+    gap: 5px;
+}
+.social-img {
+    width: 40px;
+    height: 40px;
+        transition: .5s;
+
+}
+.social-img:hover {
+    transform: scale(1.2);
+    transition: .5s;
+}
