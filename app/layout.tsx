@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import { Suspense } from "react"
 import { ReactLenis } from 'lenis/react'
+import { Analytics } from "@vercel/analytics/next"
 
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
             {children}
           </Suspense>
         </ReactLenis>
+        <Analytics />
       </body>
     </html>
   )
