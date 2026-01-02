@@ -30,7 +30,7 @@ export function Footer() {
                             href="https://open.spotify.com/playlist/2WqAscMqGj6fGkjaYN9jsY?si=74ddec964be94dca"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative text-white hover:text-foreground/80 transition-colors"
+                            className="relative text-foreground hover:text-foreground/80 transition-colors"
                             aria-label="Spotify Playlist"
                             onMouseEnter={() => setShowSpotifyEmbed(true)}
                             onMouseLeave={() => setShowSpotifyEmbed(false)}
@@ -77,7 +77,7 @@ export function Footer() {
                                                 damping: 30,
                                             },
                                         }}
-                                        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 z-50 bg-[#121212] rounded-lg shadow-2xl border border-[#282828] overflow-hidden"
+                                        className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-4 z-50 bg-card rounded-lg shadow-2xl border border-line overflow-hidden"
                                     >
                                         <motion.div
                                             className="w-80 sm:w-96 h-80 sm:h-96"
@@ -102,7 +102,7 @@ export function Footer() {
                                             animate={{ opacity: 1, y: 0 }}
                                             exit={{ opacity: 0, y: -5 }}
                                             transition={{ delay: 0.15, duration: 0.2 }}
-                                            className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-[#282828]"
+                                            className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-line"
                                         />
                                     </motion.div>
                                 )}

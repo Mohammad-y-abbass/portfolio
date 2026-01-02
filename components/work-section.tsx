@@ -85,16 +85,16 @@ export function WorkSection() {
                     transition={{ duration: 0.5 }}
                     className="relative mb-6 md:mb-10"
                 >
-                    <div className="h-px bg-[#2a2a2a] mb-4 md:mb-6" />
+                    <div className="h-px bg-line mb-4 md:mb-6" />
 
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 md:gap-3">
-                            <div className="w-4 md:w-6 h-px bg-[#404040]" />
-                            <span className="text-mono text-[#737373]">projects</span>
+                            <div className="w-4 md:w-6 h-px bg-line-accent" />
+                            <span className="text-mono text-foreground-subtle">projects</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-[#404040] rounded-full" />
-                            <div className="w-6 md:w-8 h-px bg-[#2a2a2a]" />
+                            <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-line-accent rounded-full" />
+                            <div className="w-6 md:w-8 h-px bg-line" />
                         </div>
                     </div>
                 </motion.div>
@@ -106,18 +106,18 @@ export function WorkSection() {
                     viewport={{ once: true, margin: "-50px" }}
                     className="relative"
                 >
-                    <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[#404040] via-[#2a2a2a] to-transparent hidden md:block" />
+                    <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-line-accent via-line to-transparent hidden md:block" />
 
                     <div className="md:pl-6">
                         {projects.map((project, index) => (
                             <motion.div key={project.id} variants={itemVariants}>
                                 <div
-                                    className={`group relative py-3 md:py-4 transition-all duration-300 ${index !== projects.length - 1 ? 'border-b border-[#1a1a1a] hover:border-[#404040]' : ''}`}
+                                    className={`group relative py-3 md:py-4 transition-all duration-300 ${index !== projects.length - 1 ? 'border-b border-line hover:border-line-hover' : ''}`}
                                     onMouseEnter={() => setHoveredId(project.id)}
                                     onMouseLeave={() => setHoveredId(null)}
                                 >
                                     {/* Hover indicator line */}
-                                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0 group-hover:w-3 h-px bg-[#525252] transition-all duration-300 hidden md:block" />
+                                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0 group-hover:w-3 h-px bg-line-accent transition-all duration-300 hidden md:block" />
 
                                     <a
                                         href={project.link}
@@ -127,10 +127,10 @@ export function WorkSection() {
                                     >
                                         <div className="flex items-center justify-between">
                                             <div className="flex items-center gap-2 md:gap-4">
-                                                <span className="text-large font-normal text-[#fafafa] group-hover:text-white transition-colors duration-300">
+                                                <span className="text-large font-normal text-foreground group-hover:text-foreground transition-colors duration-300">
                                                     {project.title}
                                                 </span>
-                                                <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#525252] group-hover:text-[#fafafa] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                                                <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-foreground-subtle group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                                             </div>
                                         </div>
 
@@ -144,15 +144,15 @@ export function WorkSection() {
                                                     transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] }}
                                                     className="overflow-hidden mt-3"
                                                 >
-                                                    <div className="p-3 md:p-4 bg-[#1a1a1a] border border-[#2a2a2a] rounded-lg">
-                                                        <p className="text-sm text-[#a1a1a1] mb-3">
+                                                    <div className="p-3 md:p-4 bg-secondary/30 border border-line rounded-lg">
+                                                        <p className="text-sm text-foreground-muted mb-3">
                                                             {project.description}
                                                         </p>
                                                         <div className="flex flex-wrap gap-2">
                                                             {project.technologies.map((tech) => (
                                                                 <span
                                                                     key={tech}
-                                                                    className="text-mono text-xs text-[#525252] px-2 py-1 border border-[#2a2a2a] rounded bg-[#0a0a0a]"
+                                                                    className="text-mono text-xs text-foreground-subtle px-2 py-1 border border-line rounded bg-secondary/50"
                                                                 >
                                                                     {tech}
                                                                 </span>

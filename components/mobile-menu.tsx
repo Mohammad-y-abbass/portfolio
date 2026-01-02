@@ -60,7 +60,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed inset-0 bg-black/95 backdrop-blur-md"
+                        className="fixed inset-0 bg-background/95 backdrop-blur-md"
                         onClick={onClose}
                         style={{ zIndex: 1 }}
                     />
@@ -70,17 +70,17 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                         animate={{ translateX: 0 }}
                         exit={{ translateX: "100%" }}
                         transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1.0] }}
-                        className="fixed top-0 right-0 bottom-0 w-full max-w-xs bg-black border-l border-[#222] flex flex-col h-full"
+                        className="fixed top-0 right-0 bottom-0 w-full max-w-xs bg-background border-l border-line flex flex-col h-full"
                         style={{ zIndex: 2, willChange: "transform" }}
                     >
-                        <div className="flex justify-between items-center p-3 border-b border-[#222]">
+                        <div className="flex justify-between items-center p-3 border-b border-line">
                             <div className="flex items-center gap-2">
-                                <div className="w-1.5 h-px bg-[#333]" />
-                                <span className="text-mono text-[#444]">menu</span>
+                                <div className="w-1.5 h-px bg-line-accent" />
+                                <span className="text-mono text-foreground-subtle">menu</span>
                             </div>
                             <button
                                 onClick={onClose}
-                                className="w-7 h-7 flex items-center justify-center border border-[#222] hover:border-[#333] text-[#666] hover:text-[#ededed] transition-colors"
+                                className="w-7 h-7 flex items-center justify-center border border-line hover:border-line-hover text-foreground-subtle hover:text-foreground transition-colors"
                                 aria-label="Close menu"
                             >
                                 <X className="h-3.5 w-3.5" />
@@ -93,7 +93,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                                     <a
                                         key={item.name}
                                         href={item.href}
-                                        className={`group flex items-center gap-3 py-3 border-b border-[#1a1a1a] ${currentSection === item.id ? "text-[#ededed]" : "text-[#666] hover:text-[#ededed]"
+                                        className={`group flex items-center gap-3 py-3 border-b border-line-hover ${currentSection === item.id ? "text-foreground" : "text-foreground-subtle hover:text-foreground"
                                             } transition-colors duration-300`}
                                         onClick={(e) => {
                                             e.preventDefault()
@@ -106,11 +106,11 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                             </nav>
                         </div>
 
-                        <div className="border-t border-[#222] p-3">
+                        <div className="border-t border-line p-3">
                             <div className="flex items-center gap-2">
-                                <div className="w-1 h-1 bg-[#333] rounded-full" />
-                                <span className="text-mono text-[#444]">&copy; {new Date().getFullYear()}</span>
-                                <div className="flex-1 h-px bg-[#1a1a1a]" />
+                                <div className="w-1 h-1 bg-line-accent rounded-full" />
+                                <span className="text-mono text-foreground-subtle">&copy; {new Date().getFullYear()}</span>
+                                <div className="flex-1 h-px bg-line" />
                             </div>
                         </div>
                     </motion.div>

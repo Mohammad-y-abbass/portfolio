@@ -4,6 +4,8 @@ import "./globals.css"
 import { Suspense } from "react"
 import { ReactLenis } from 'lenis/react'
 import { Analytics } from "@vercel/analytics/next"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 
 export const metadata: Metadata = {
@@ -18,11 +20,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="font-sans antialiased bg-black overflow-x-hidden">
+      <body className="font-sans antialiased bg-background text-foreground overflow-x-hidden">
         <ReactLenis root>
-          <Suspense fallback={<div>Loading...</div>}>
-            {children}
-          </Suspense>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <Suspense fallback={<div>Loading...</div>}>
+              {children}
+            </Suspense>
+            <ThemeToggle />
+          </ThemeProvider>
         </ReactLenis>
         <Analytics />
       </body>

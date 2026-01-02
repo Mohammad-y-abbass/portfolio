@@ -69,16 +69,16 @@ export function ExperienceSection() {
                     transition={{ duration: 0.5 }}
                     className="relative mb-6 md:mb-10"
                 >
-                    <div className="h-px bg-[#2a2a2a] mb-4 md:mb-6" />
+                    <div className="h-px bg-line mb-4 md:mb-6" />
 
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 md:gap-3">
-                            <div className="w-4 md:w-6 h-px bg-[#404040]" />
-                            <span className="text-mono text-[#737373]">experience</span>
+                            <div className="w-4 md:w-6 h-px bg-line-accent" />
+                            <span className="text-mono text-foreground-subtle">experience</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <Briefcase className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#525252]" />
-                            <div className="w-6 md:w-8 h-px bg-[#2a2a2a]" />
+                            <Briefcase className="w-3.5 h-3.5 md:w-4 md:h-4 text-foreground-subtle" />
+                            <div className="w-6 md:w-8 h-px bg-line" />
                         </div>
                     </div>
                 </motion.div>
@@ -90,30 +90,30 @@ export function ExperienceSection() {
                     viewport={{ once: true, margin: "-50px" }}
                     className="relative"
                 >
-                    <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[#404040] via-[#2a2a2a] to-transparent hidden md:block" />
+                    <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-line-accent via-line to-transparent hidden md:block" />
 
                     <div className="md:pl-6 space-y-0">
                         {experiences.map((experience, index) => (
                             <motion.div key={experience.id} variants={itemVariants}>
-                                <div className={`group relative py-4 md:py-6 transition-all duration-300 ${index !== experiences.length - 1 ? 'border-b border-[#1a1a1a] hover:border-[#404040]' : ''}`}>
+                                <div className={`group relative py-4 md:py-6 transition-all duration-300 ${index !== experiences.length - 1 ? 'border-b border-line hover:border-line-hover' : ''}`}>
                                     {/* Timeline dot */}
-                                    <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-2 h-2 bg-[#2a2a2a] group-hover:bg-[#525252] rounded-full transition-colors duration-300 hidden md:block" />
+                                    <div className="absolute -left-6 top-1/2 -translate-y-1/2 w-2 h-2 bg-line group-hover:bg-line-accent rounded-full transition-colors duration-300 hidden md:block" />
 
                                     {/* Hover indicator line */}
-                                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0 group-hover:w-3 h-px bg-[#525252] transition-all duration-300 hidden md:block" />
+                                    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-0 group-hover:w-3 h-px bg-line-accent transition-all duration-300 hidden md:block" />
 
                                     <div className="md:pl-4">
                                         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4">
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-2 md:gap-3 mb-1">
-                                                    <h3 className="text-large font-normal text-[#fafafa] group-hover:text-white transition-colors duration-300">
+                                                    <h3 className="text-large font-normal text-foreground group-hover:text-foreground transition-colors duration-300">
                                                         {experience.role}
                                                     </h3>
                                                 </div>
                                                 <div className="flex items-center gap-2 mb-2 md:mb-3">
-                                                    <span className="text-base text-[#a1a1a1]">{experience.company}</span>
-                                                    <span className="text-[#404040]">•</span>
-                                                    <span className="text-mono text-[#525252]">{experience.period}</span>
+                                                    <span className="text-base text-foreground-muted">{experience.company}</span>
+                                                    <span className="text-foreground-subtle">•</span>
+                                                    <span className="text-mono text-foreground-subtle">{experience.period}</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -123,7 +123,7 @@ export function ExperienceSection() {
                                             {experience.technologies.map((tech) => (
                                                 <span
                                                     key={tech}
-                                                    className="text-mono text-[#525252] group-hover:text-[#737373] transition-colors duration-300 px-2 py-0.5 border border-[#2a2a2a] group-hover:border-[#404040] rounded"
+                                                    className="text-mono text-foreground-subtle group-hover:text-foreground-muted transition-colors duration-300 px-2 py-0.5 border border-line group-hover:border-line-accent rounded"
                                                 >
                                                     {tech}
                                                 </span>

@@ -11,39 +11,36 @@ const links = [
 ]
 
 const asciiArt = `
-                      =_-___
-                    o    \\__ \\
-                   o       __| \\
-                    o      \\__  \\
-                      oooo    \\  \\
-                               \\  \\
- __________________             |   \\
-|__________________|             \\   |
- \\/\\/\\/\\/\\/\\/\\/\\/\\/     _----_    |   |
-  \\/\\/\\/\\/\\/\\/\\/\\/     |      \\   |   |
-   \\/\\/\\/\\/\\/\\/\\/      |       |    |  |
-    |/\\/\\/\\/\\/\\/|        |       \\__/    |
-    |/\\/\\/\\/\\/\\/|         __---          |
-    |/\\/\\/\\/\\/\\/|       /   \\            |
-                      |     |          |
-                      |   /            |
-                      |   \\            |
-                      |   | \\          |
-                      |   |   \\____-----\\
-                      |   |    \\____-----
-                       |  |    |          \\
-                       |  |   |             \\
-                        \\  \\_|_      |       |
-                         \\____/  ___/ \\_____/\\
-                            /    /       \\     \\
-                          /     /          \\     \\
-                         /    /              \\    \\
-                       /    /                  \\    \\
-                      /   /                      \\   \\
-                /\\   /  /                          \\  |
-               |  \\/ \\/                              \\/ \\
-                \\    |                             __/   |
-                  \\_/                            /______/
+                       .,,uod8B8bou,,.
+              ..,uod8BBBBBBBBBBBBBBBBRPFT?l!i:.
+         ,=m8BBBBBBBBBBBBBBBRPFT?!||||||||||||||
+         !...:!TVBBBRPFT||||||||||!!^^""'   ||||
+         !.......:!?|||||!!^^""'            ||||
+         !.........||||                     ||||
+         !.........||||  ##                 ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         !.........||||                     ||||
+         !.........||||                    ,||||
+          .;.......||||               _.-!!|||||
+   .,uodWBBBBb.....||||       _.-!!|||||||||!:'
+!YBBBBBBBBBBBBBBb..!|||:..-!!|||||||!iof68BBBBBb....
+!..YBBBBBBBBBBBBBBb!!||||||||!iof68BBBBBBRPFT?!::   .
+!....YBBBBBBBBBBBBBBbaaitf68BBBBBBRPFT?!:::::::::     .
+!......YBBBBBBBBBBBBBBBBBBBRPFT?!::::::;:!^"';:::      .
+!........YBBBBBBBBBBRPFT?!::::::::::^''...::::::;         iBBbo.
+!..........YBRPFT?!::::::::::::::::::::::::;iof68bo.      WBBBBbo.
+  ..........:::::::::::::::::::::::;iof688888888888b.     'YBBBP^'
+    ........::::::::::::::::;iof688888888888888888888b.     '
+      ......:::::::::;iof688888888888888888888888888888b.
+        ....:::;iof688888888888888888888888888888888899fT!
+          ..::!8888888888888888888888888888888899fT|!^"'
+            ' !!988888888888888888888888899fT|!^"'
+                !!8888888888888888899fT|!^"'
+                  !988888888899fT|!^"'
+                    !9899fT|!^"'
+                      !^"'
 `
 
 export function ContactSection() {
@@ -88,16 +85,16 @@ export function ContactSection() {
                     transition={{ duration: 0.5 }}
                     className="relative mb-6 md:mb-10"
                 >
-                    <div className="h-px bg-[#2a2a2a] mb-4 md:mb-6" />
+                    <div className="h-px bg-line mb-4 md:mb-6" />
 
                     <div className="flex items-center justify-between">
                         <div className="flex items-center gap-2 md:gap-3">
-                            <div className="w-4 md:w-6 h-px bg-[#404040]" />
-                            <span className="text-mono text-[#737373]">contact</span>
+                            <div className="w-4 md:w-6 h-px bg-line-accent" />
+                            <span className="text-mono text-foreground-subtle">contact</span>
                         </div>
                         <div className="flex items-center gap-2">
-                            <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-[#404040] rounded-full" />
-                            <div className="w-6 md:w-8 h-px bg-[#2a2a2a]" />
+                            <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-line-accent rounded-full" />
+                            <div className="w-6 md:w-8 h-px bg-line" />
                         </div>
                     </div>
                 </motion.div>
@@ -110,24 +107,24 @@ export function ContactSection() {
                         viewport={{ once: true, margin: "-50px" }}
                         className="relative flex-1"
                     >
-                        <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-[#404040] via-[#2a2a2a] to-transparent hidden md:block" />
+                        <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-line-accent via-line to-transparent hidden md:block" />
 
                         <div className="md:pl-6 space-y-2">
                             {links.map((link) => (
                                 <motion.div
                                     key={link.label}
                                     variants={itemVariants}
-                                    className="group flex items-center justify-between py-2.5 md:py-3 border-b border-[#1a1a1a] hover:border-[#404040] transition-colors duration-300 md:pl-4"
+                                    className="group flex items-center justify-between py-2.5 md:py-3 border-b border-line hover:border-line-hover transition-colors duration-300 md:pl-4"
                                 >
                                     {link.copyable ? (
                                         <div className="flex items-center justify-between w-full pr-2">
                                             <div className="flex items-center gap-2 md:gap-3">
-                                                <span className="text-mono text-[#737373]">{link.label}</span>
-                                                <span className="text-base text-[#a1a1a1] truncate max-w-[140px] md:max-w-none">{link.value}</span>
+                                                <span className="text-mono text-foreground-subtle">{link.label}</span>
+                                                <span className="text-base text-foreground-muted truncate max-w-[140px] md:max-w-none">{link.value}</span>
                                             </div>
                                             <button
                                                 onClick={copyEmail}
-                                                className="text-[#525252] hover:text-[#fafafa] transition-colors duration-300 flex-shrink-0"
+                                                className="text-foreground-subtle hover:text-foreground transition-colors duration-300 flex-shrink-0"
                                                 aria-label="Copy email"
                                             >
                                                 {copied ? (
@@ -145,14 +142,14 @@ export function ContactSection() {
                                             className="flex items-center justify-between w-full pr-2"
                                         >
                                             <div className="flex items-center gap-2 md:gap-3">
-                                                <span className="text-mono text-[#737373] group-hover:text-[#a1a1a1] transition-colors">
+                                                <span className="text-mono text-foreground-subtle group-hover:text-foreground-muted transition-colors">
                                                     {link.label}
                                                 </span>
-                                                <span className="text-base text-[#a1a1a1] group-hover:text-[#fafafa] transition-colors duration-300">
+                                                <span className="text-base text-foreground-muted group-hover:text-foreground transition-colors duration-300">
                                                     {link.value}
                                                 </span>
                                             </div>
-                                            <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#525252] group-hover:text-[#fafafa] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                                            <ArrowUpRight className="w-3.5 h-3.5 md:w-4 md:h-4 text-foreground-subtle group-hover:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
                                         </a>
                                     )}
                                 </motion.div>
@@ -167,7 +164,7 @@ export function ContactSection() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="hidden md:block flex-shrink-0"
                     >
-                        <pre className="font-mono text-xs text-[#a1a1a1] leading-none select-none">
+                        <pre className="font-mono text-xs text-foreground-subtle leading-none select-none">
                             {asciiArt}
                         </pre>
                     </motion.div>
