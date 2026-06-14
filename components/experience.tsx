@@ -9,7 +9,6 @@ type Role = {
   period: string
   location: string
   summary: string
-  highlights: string[]
   stack: string[]
   current?: boolean
 }
@@ -18,59 +17,38 @@ const ROLES: Role[] = [
   {
     company: "Big Data Specialist (Volunteer)",
     role: "Full Stack Developer",
-    period: "08/2024 to Present",
+    period: "12-2025 present",
     location: "Remote",
     summary:
       "Designing and deploying LearnDevs, a unified developer hub aggregating programming courses, tech news, and remote jobs.",
-    highlights: [
-      "Built fully automated background job system using cron-based scheduling to ingest tech news, remote jobs, and GitHub repositories daily.",
-      "Engineered scalable data pipelines using Python and Playwright to aggregate 20,000+ records with fault tolerant processing.",
-      "Implemented CI/CD pipelines with GitHub Actions and containerized deployment workflows for reliable production releases.",
-      "Integrated Cloudflare to optimize global performance and system availability.",
-    ],
     stack: ["Next.js", "Go", "Python", "GCP", "Docker"],
     current: true,
   },
   {
     company: "Vertex Partners",
     role: "Frontend Developer",
-    period: "04/2025 to 10/2025",
+    period: "3-2025 to 11-2025",
     location: "Remote",
     summary:
       "Optimized frontend performance and user experience for a high traffic student housing platform.",
-    highlights: [
-      "Achieved Lighthouse performance scores of 90+ through systematic optimization and modern Next.js patterns.",
-      "Designed scalable UI systems for complex dashboards and map-based interfaces with efficient state management.",
-      "Collaborated in agile cycles with backend and product teams to deliver production ready features.",
-    ],
     stack: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
     company: "3E Tech",
     role: "Full Stack Developer Intern",
-    period: "01/2025 to 04/2025",
+    period: "12-2024 to 3-2025",
     location: "Beirut · Hybrid",
     summary:
       "Developed full-stack features for LMS and property management platforms using React and NestJS.",
-    highlights: [
-      "Managed complex client state using Redux Toolkit, significantly improving maintainability of large scale UI workflows.",
-      "Optimized backend services and PostgreSQL queries using Prisma ORM, reducing API response time by ~25%.",
-      "Implemented role based access control and secure validation pipelines across all backend services.",
-    ],
     stack: ["React", "TypeScript", "NestJS", "PostgreSQL", "Prisma"],
   },
   {
     company: "Bracket Technologies",
     role: "Software Developer",
-    period: "2024",
-    location: "Beirut",
+    period: "5-2024 to 8-2024",
+    location: "Hazmieh",
     summary:
       "Contributed to high performance search and filtering systems for travel platforms.",
-    highlights: [
-      "Built a robust search system for flight and hotel listings, focusing on performance and accuracy.",
-      "Designed secure backend authentication and role based access control workflows.",
-      "Collaborated in a high load environment to ensure system reliability and consistent performance.",
-    ],
     stack: ["JavaScript", "Node.js", "SQL"],
   },
 ]
@@ -178,21 +156,6 @@ function RoleEntry({ role }: { role: Role }) {
       <p className="mt-4 text-sm md:text-base text-foreground/80 text-pretty max-w-2xl">
         {role.summary}
       </p>
-
-      <ul className="mt-4 space-y-2">
-        {role.highlights.map((h) => (
-          <li
-            key={h}
-            className="relative pl-4 text-sm text-muted-foreground text-pretty max-w-2xl"
-          >
-            <span
-              aria-hidden
-              className="absolute left-0 top-2 size-1 rounded-full bg-foreground/40"
-            />
-            {h}
-          </li>
-        ))}
-      </ul>
 
       {/* Stack tags */}
       <div className="mt-5 flex flex-wrap gap-1.5">
