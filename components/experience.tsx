@@ -26,7 +26,7 @@ const ROLES: Role[] = [
   },
   {
     company: "Vertex Partners",
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     period: "3-2025 to 11-2025",
     location: "Remote",
     summary:
