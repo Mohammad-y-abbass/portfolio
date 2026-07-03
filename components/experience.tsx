@@ -8,19 +8,16 @@ type Role = {
   role: string
   period: string
   location: string
-  summary: string
   stack: string[]
   current?: boolean
 }
 
 const ROLES: Role[] = [
   {
-    company: "Big Data Specialist (Volunteer)",
+    company: "Big Data Specialist",
     role: "Full Stack Developer",
     period: "12-2025 present",
     location: "Remote",
-    summary:
-      "Designing and deploying LearnDevs, a unified developer hub aggregating programming courses, tech news, and remote jobs.",
     stack: ["Next.js", "Go", "Python", "GCP", "Docker"],
     current: true,
   },
@@ -29,8 +26,6 @@ const ROLES: Role[] = [
     role: "Full Stack Developer",
     period: "3-2025 to 11-2025",
     location: "Remote",
-    summary:
-      "Optimized frontend performance and user experience for a high traffic student housing platform.",
     stack: ["Next.js", "TypeScript", "Tailwind"],
   },
   {
@@ -38,8 +33,6 @@ const ROLES: Role[] = [
     role: "Full Stack Developer Intern",
     period: "12-2024 to 3-2025",
     location: "Beirut · Hybrid",
-    summary:
-      "Developed full-stack features for LMS and property management platforms using React and NestJS.",
     stack: ["React", "TypeScript", "NestJS", "PostgreSQL", "Prisma"],
   },
   {
@@ -47,8 +40,6 @@ const ROLES: Role[] = [
     role: "Software Developer",
     period: "5-2024 to 8-2024",
     location: "Hazmieh",
-    summary:
-      "Contributed to high performance search and filtering systems for travel platforms.",
     stack: ["JavaScript", "Node.js", "SQL"],
   },
 ]
@@ -151,11 +142,6 @@ function RoleEntry({ role }: { role: Role }) {
           <span className="md:text-[10px]">{role.location}</span>
         </div>
       </div>
-
-      {/* Body */}
-      <p className="mt-4 text-sm md:text-base text-foreground/80 text-pretty max-w-2xl">
-        {role.summary}
-      </p>
 
       {/* Stack tags */}
       <div className="mt-5 flex flex-wrap gap-1.5">
