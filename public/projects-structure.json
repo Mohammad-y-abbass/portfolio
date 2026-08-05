@@ -1,0 +1,1478 @@
+{
+  "code-editor": {
+    "name": "code-editor",
+    "path": "code-editor",
+    "type": "folder",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "index.html",
+        "path": "index.html",
+        "type": "file",
+        "language": "html"
+      },
+      {
+        "name": "package.json",
+        "path": "package.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "src",
+        "path": "src",
+        "type": "folder",
+        "children": [
+          {
+            "name": "App.tsx",
+            "path": "src/App.tsx",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "app.css",
+            "path": "src/app.css",
+            "type": "file",
+            "language": "css"
+          },
+          {
+            "name": "bundler",
+            "path": "src/bundler",
+            "type": "folder",
+            "children": [
+              {
+                "name": "index.ts",
+                "path": "src/bundler/index.ts",
+                "type": "file",
+                "language": "typescript"
+              },
+              {
+                "name": "plugins",
+                "path": "src/bundler/plugins",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "fetch-plugin.ts",
+                    "path": "src/bundler/plugins/fetch-plugin.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "unpkg-path-plugin.ts",
+                    "path": "src/bundler/plugins/unpkg-path-plugin.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "components",
+            "path": "src/components",
+            "type": "folder",
+            "children": [
+              {
+                "name": "CodeEditor.tsx",
+                "path": "src/components/CodeEditor.tsx",
+                "type": "file",
+                "language": "typescript"
+              },
+              {
+                "name": "Loader.tsx",
+                "path": "src/components/Loader.tsx",
+                "type": "file",
+                "language": "typescript"
+              },
+              {
+                "name": "Preview.tsx",
+                "path": "src/components/Preview.tsx",
+                "type": "file",
+                "language": "typescript"
+              }
+            ]
+          },
+          {
+            "name": "main.tsx",
+            "path": "src/main.tsx",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "vite-env.d.ts",
+            "path": "src/vite-env.d.ts",
+            "type": "file",
+            "language": "typescript"
+          }
+        ]
+      },
+      {
+        "name": "tsconfig.json",
+        "path": "tsconfig.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "tsconfig.node.json",
+        "path": "tsconfig.node.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "vite.config.ts",
+        "path": "vite.config.ts",
+        "type": "file",
+        "language": "typescript"
+      }
+    ]
+  },
+  "job-match-agent": {
+    "name": "job-match-agent",
+    "path": "job-match-agent",
+    "type": "folder",
+    "children": [
+      {
+        "name": "package.json",
+        "path": "package.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "resume.md",
+        "path": "resume.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "src",
+        "path": "src",
+        "type": "folder",
+        "children": [
+          {
+            "name": "career-watcher.ts",
+            "path": "src/career-watcher.ts",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "companies.json",
+            "path": "src/companies.json",
+            "type": "file",
+            "language": "json"
+          },
+          {
+            "name": "gemini.ts",
+            "path": "src/gemini.ts",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "index.ts",
+            "path": "src/index.ts",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "matcher.ts",
+            "path": "src/matcher.ts",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "notifier.ts",
+            "path": "src/notifier.ts",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "scraper.ts",
+            "path": "src/scraper.ts",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "types.ts",
+            "path": "src/types.ts",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "websites.json",
+            "path": "src/websites.json",
+            "type": "file",
+            "language": "json"
+          }
+        ]
+      },
+      {
+        "name": "tsconfig.json",
+        "path": "tsconfig.json",
+        "type": "file",
+        "language": "json"
+      }
+    ]
+  },
+  "mearch": {
+    "name": "mearch",
+    "path": "mearch",
+    "type": "folder",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "cmd",
+        "path": "cmd",
+        "type": "folder",
+        "children": [
+          {
+            "name": "mearch",
+            "path": "cmd/mearch",
+            "type": "folder",
+            "children": [
+              {
+                "name": "main.go",
+                "path": "cmd/mearch/main.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "internal",
+        "path": "internal",
+        "type": "folder",
+        "children": [
+          {
+            "name": "extractor",
+            "path": "internal/extractor",
+            "type": "folder",
+            "children": [
+              {
+                "name": "extractor.go",
+                "path": "internal/extractor/extractor.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "go.go",
+                "path": "internal/extractor/go.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "java.go",
+                "path": "internal/extractor/java.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "js.go",
+                "path": "internal/extractor/js.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "python.go",
+                "path": "internal/extractor/python.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "rust.go",
+                "path": "internal/extractor/rust.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "ts.go",
+                "path": "internal/extractor/ts.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils.go",
+                "path": "internal/extractor/utils.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "graph",
+            "path": "internal/graph",
+            "type": "folder",
+            "children": [
+              {
+                "name": "builder.go",
+                "path": "internal/graph/builder.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "edge.go",
+                "path": "internal/graph/edge.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "graph.go",
+                "path": "internal/graph/graph.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "node.go",
+                "path": "internal/graph/node.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "stats.go",
+                "path": "internal/graph/stats.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils.go",
+                "path": "internal/graph/utils.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "ir",
+            "path": "internal/ir",
+            "type": "folder",
+            "children": [
+              {
+                "name": "call.go",
+                "path": "internal/ir/call.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "edge.go",
+                "path": "internal/ir/edge.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "file.go",
+                "path": "internal/ir/file.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "function.go",
+                "path": "internal/ir/function.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "import.go",
+                "path": "internal/ir/import.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "ir.go",
+                "path": "internal/ir/ir.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "symbol.go",
+                "path": "internal/ir/symbol.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "mcp",
+            "path": "internal/mcp",
+            "type": "folder",
+            "children": [
+              {
+                "name": "auto_index.go",
+                "path": "internal/mcp/auto_index.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "server.go",
+                "path": "internal/mcp/server.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils.go",
+                "path": "internal/mcp/utils.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "parser",
+            "path": "internal/parser",
+            "type": "folder",
+            "children": [
+              {
+                "name": "error.go",
+                "path": "internal/parser/error.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "languages.go",
+                "path": "internal/parser/languages.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "parser.go",
+                "path": "internal/parser/parser.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "result.go",
+                "path": "internal/parser/result.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils.go",
+                "path": "internal/parser/utils.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "retrieval",
+            "path": "internal/retrieval",
+            "type": "folder",
+            "children": [
+              {
+                "name": "bm25.go",
+                "path": "internal/retrieval/bm25.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "compressor.go",
+                "path": "internal/retrieval/compressor.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "documents.go",
+                "path": "internal/retrieval/documents.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "expander.go",
+                "path": "internal/retrieval/expander.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "fusion.go",
+                "path": "internal/retrieval/fusion.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "preprocessor.go",
+                "path": "internal/retrieval/preprocessor.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "retrieval.go",
+                "path": "internal/retrieval/retrieval.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "scorer.go",
+                "path": "internal/retrieval/scorer.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "seeds.go",
+                "path": "internal/retrieval/seeds.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "traversal.go",
+                "path": "internal/retrieval/traversal.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils.go",
+                "path": "internal/retrieval/utils.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "scanner",
+            "path": "internal/scanner",
+            "type": "folder",
+            "children": [
+              {
+                "name": "error.go",
+                "path": "internal/scanner/error.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "extensions.go",
+                "path": "internal/scanner/extensions.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "ignore.go",
+                "path": "internal/scanner/ignore.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "itoa.go",
+                "path": "internal/scanner/itoa.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "options.go",
+                "path": "internal/scanner/options.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "scanner.go",
+                "path": "internal/scanner/scanner.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "watcher",
+            "path": "internal/watcher",
+            "type": "folder",
+            "children": [
+              {
+                "name": "watch.go",
+                "path": "internal/watcher/watch.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "mo-language": {
+    "name": "mo-language",
+    "path": "mo-language",
+    "type": "folder",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "package.json",
+        "path": "package.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "src",
+        "path": "src",
+        "type": "folder",
+        "children": [
+          {
+            "name": "ast.json",
+            "path": "src/ast.json",
+            "type": "file",
+            "language": "json"
+          },
+          {
+            "name": "cli",
+            "path": "src/cli",
+            "type": "folder",
+            "children": [
+              {
+                "name": "cli.js",
+                "path": "src/cli/cli.js",
+                "type": "file",
+                "language": "javascript"
+              }
+            ]
+          },
+          {
+            "name": "example",
+            "path": "src/example",
+            "type": "folder",
+            "children": [
+              {
+                "name": "example.txt",
+                "path": "src/example/example.txt",
+                "type": "file",
+                "language": "text"
+              }
+            ]
+          },
+          {
+            "name": "grammar",
+            "path": "src/grammar",
+            "type": "folder",
+            "children": [
+              {
+                "name": "grammar.js",
+                "path": "src/grammar/grammar.js",
+                "type": "file",
+                "language": "javascript"
+              },
+              {
+                "name": "lexer.js",
+                "path": "src/grammar/lexer.js",
+                "type": "file",
+                "language": "javascript"
+              }
+            ]
+          },
+          {
+            "name": "parser",
+            "path": "src/parser",
+            "type": "folder",
+            "children": [
+              {
+                "name": "parse.js",
+                "path": "src/parser/parse.js",
+                "type": "file",
+                "language": "javascript"
+              }
+            ]
+          },
+          {
+            "name": "runtime",
+            "path": "src/runtime",
+            "type": "folder",
+            "children": [
+              {
+                "name": "runtime.js",
+                "path": "src/runtime/runtime.js",
+                "type": "file",
+                "language": "javascript"
+              }
+            ]
+          },
+          {
+            "name": "transpiler",
+            "path": "src/transpiler",
+            "type": "folder",
+            "children": [
+              {
+                "name": "transpile.js",
+                "path": "src/transpiler/transpile.js",
+                "type": "file",
+                "language": "javascript"
+              },
+              {
+                "name": "transpiled.js",
+                "path": "src/transpiler/transpiled.js",
+                "type": "file",
+                "language": "javascript"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "moDB": {
+    "name": "moDB",
+    "path": "moDB",
+    "type": "folder",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "data",
+        "path": "data",
+        "type": "folder",
+        "children": [
+          {
+            "name": "test",
+            "path": "data/test",
+            "type": "folder",
+            "children": [
+              {
+                "name": "users.json",
+                "path": "data/test/users.json",
+                "type": "file",
+                "language": "json"
+              }
+            ]
+          },
+          {
+            "name": "test_rels",
+            "path": "data/test_rels",
+            "type": "folder",
+            "children": [
+              {
+                "name": "departments.json",
+                "path": "data/test_rels/departments.json",
+                "type": "file",
+                "language": "json"
+              },
+              {
+                "name": "employees.json",
+                "path": "data/test_rels/employees.json",
+                "type": "file",
+                "language": "json"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "internal",
+        "path": "internal",
+        "type": "folder",
+        "children": [
+          {
+            "name": "ast",
+            "path": "internal/ast",
+            "type": "folder",
+            "children": [
+              {
+                "name": "ast.go",
+                "path": "internal/ast/ast.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "ast_test.go",
+                "path": "internal/ast/ast_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "create.go",
+                "path": "internal/ast/create.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "database.go",
+                "path": "internal/ast/database.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "delete.go",
+                "path": "internal/ast/delete.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "drop.go",
+                "path": "internal/ast/drop.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "indentifier.go",
+                "path": "internal/ast/indentifier.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "insert.go",
+                "path": "internal/ast/insert.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "select.go",
+                "path": "internal/ast/select.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "show.go",
+                "path": "internal/ast/show.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "update.go",
+                "path": "internal/ast/update.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "where.go",
+                "path": "internal/ast/where.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "executor",
+            "path": "internal/executor",
+            "type": "folder",
+            "children": [
+              {
+                "name": "executor.go",
+                "path": "internal/executor/executor.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "executor_test.go",
+                "path": "internal/executor/executor_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils.go",
+                "path": "internal/executor/utils.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "integration_test.go",
+            "path": "internal/integration_test.go",
+            "type": "file",
+            "language": "go"
+          },
+          {
+            "name": "lexer",
+            "path": "internal/lexer",
+            "type": "folder",
+            "children": [
+              {
+                "name": "lexer.go",
+                "path": "internal/lexer/lexer.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "lexer_comprehensive_test.go",
+                "path": "internal/lexer/lexer_comprehensive_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "lexer_test.go",
+                "path": "internal/lexer/lexer_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "token.go",
+                "path": "internal/lexer/token.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils.go",
+                "path": "internal/lexer/utils.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "utils_test.go",
+                "path": "internal/lexer/utils_test.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "parser",
+            "path": "internal/parser",
+            "type": "folder",
+            "children": [
+              {
+                "name": "parser.go",
+                "path": "internal/parser/parser.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "parser_comprehensive_test.go",
+                "path": "internal/parser/parser_comprehensive_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "parser_test.go",
+                "path": "internal/parser/parser_test.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "planner",
+            "path": "internal/planner",
+            "type": "folder",
+            "children": [
+              {
+                "name": "planner.go",
+                "path": "internal/planner/planner.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "planner_test.go",
+                "path": "internal/planner/planner_test.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "server",
+            "path": "internal/server",
+            "type": "folder",
+            "children": [
+              {
+                "name": "server.go",
+                "path": "internal/server/server.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          },
+          {
+            "name": "storage",
+            "path": "internal/storage",
+            "type": "folder",
+            "children": [
+              {
+                "name": "engine.go",
+                "path": "internal/storage/engine.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "engine_test.go",
+                "path": "internal/storage/engine_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "manager.go",
+                "path": "internal/storage/manager.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "manager_test.go",
+                "path": "internal/storage/manager_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "page.go",
+                "path": "internal/storage/page.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "page_test.go",
+                "path": "internal/storage/page_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "pager.go",
+                "path": "internal/storage/pager.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "pager_test.go",
+                "path": "internal/storage/pager_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "schema.go",
+                "path": "internal/storage/schema.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "schema_test.go",
+                "path": "internal/storage/schema_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "serializer.go",
+                "path": "internal/storage/serializer.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "serializer_comprehensive_test.go",
+                "path": "internal/storage/serializer_comprehensive_test.go",
+                "type": "file",
+                "language": "go"
+              },
+              {
+                "name": "serializer_test.go",
+                "path": "internal/storage/serializer_test.go",
+                "type": "file",
+                "language": "go"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "main.go",
+        "path": "main.go",
+        "type": "file",
+        "language": "go"
+      },
+      {
+        "name": "test_db",
+        "path": "test_db",
+        "type": "folder",
+        "children": [
+          {
+            "name": "shop",
+            "path": "test_db/shop",
+            "type": "folder",
+            "children": [
+              {
+                "name": "orders.json",
+                "path": "test_db/shop/orders.json",
+                "type": "file",
+                "language": "json"
+              },
+              {
+                "name": "users.json",
+                "path": "test_db/shop/users.json",
+                "type": "file",
+                "language": "json"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "rapid-express": {
+    "name": "rapid-express",
+    "path": "rapid-express",
+    "type": "folder",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "index.js",
+        "path": "index.js",
+        "type": "file",
+        "language": "javascript"
+      },
+      {
+        "name": "package.json",
+        "path": "package.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "template",
+        "path": "template",
+        "type": "folder",
+        "children": [
+          {
+            "name": "package.json",
+            "path": "template/package.json",
+            "type": "file",
+            "language": "json"
+          },
+          {
+            "name": "src",
+            "path": "template/src",
+            "type": "folder",
+            "children": [
+              {
+                "name": "app",
+                "path": "template/src/app",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "Base.Controller.ts",
+                    "path": "template/src/app/Base.Controller.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "initializeApp.ts",
+                    "path": "template/src/app/initializeApp.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "registerControllers.ts",
+                    "path": "template/src/app/registerControllers.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  }
+                ]
+              },
+              {
+                "name": "db",
+                "path": "template/src/db",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "config.ts",
+                    "path": "template/src/db/config.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  }
+                ]
+              },
+              {
+                "name": "decorators",
+                "path": "template/src/decorators",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "controller.ts",
+                    "path": "template/src/decorators/controller.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "decorators.types.ts",
+                    "path": "template/src/decorators/decorators.types.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "middleware.ts",
+                    "path": "template/src/decorators/middleware.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "routing.ts",
+                    "path": "template/src/decorators/routing.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "validator.ts",
+                    "path": "template/src/decorators/validator.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  }
+                ]
+              },
+              {
+                "name": "errorHandlers",
+                "path": "template/src/errorHandlers",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "AppError.ts",
+                    "path": "template/src/errorHandlers/AppError.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "ConflictError.ts",
+                    "path": "template/src/errorHandlers/ConflictError.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "NotFoundError.ts",
+                    "path": "template/src/errorHandlers/NotFoundError.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "ValidationError.ts",
+                    "path": "template/src/errorHandlers/ValidationError.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  },
+                  {
+                    "name": "invalidCredentialsError.ts",
+                    "path": "template/src/errorHandlers/invalidCredentialsError.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  }
+                ]
+              },
+              {
+                "name": "features",
+                "path": "template/src/features",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "auth",
+                    "path": "template/src/features/auth",
+                    "type": "folder",
+                    "children": [
+                      {
+                        "name": "controllers",
+                        "path": "template/src/features/auth/controllers",
+                        "type": "folder",
+                        "children": [
+                          {
+                            "name": "Auth.Controller.ts",
+                            "path": "template/src/features/auth/controllers/Auth.Controller.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "middlewares",
+                        "path": "template/src/features/auth/middlewares",
+                        "type": "folder",
+                        "children": [
+                          {
+                            "name": "rateLimitMiddleware.ts",
+                            "path": "template/src/features/auth/middlewares/rateLimitMiddleware.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "services",
+                        "path": "template/src/features/auth/services",
+                        "type": "folder",
+                        "children": [
+                          {
+                            "name": "Auth.Service.ts",
+                            "path": "template/src/features/auth/services/Auth.Service.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "types",
+                        "path": "template/src/features/auth/types",
+                        "type": "folder",
+                        "children": [
+                          {
+                            "name": "auth.types.ts",
+                            "path": "template/src/features/auth/types/auth.types.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "utils",
+                        "path": "template/src/features/auth/utils",
+                        "type": "folder",
+                        "children": [
+                          {
+                            "name": "hashPassword.ts",
+                            "path": "template/src/features/auth/utils/hashPassword.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          },
+                          {
+                            "name": "token.ts",
+                            "path": "template/src/features/auth/utils/token.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "validations",
+                        "path": "template/src/features/auth/validations",
+                        "type": "folder",
+                        "children": [
+                          {
+                            "name": "signinValidations.ts",
+                            "path": "template/src/features/auth/validations/signinValidations.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          },
+                          {
+                            "name": "signupValidations.ts",
+                            "path": "template/src/features/auth/validations/signupValidations.ts",
+                            "type": "file",
+                            "language": "typescript"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "index.ts",
+                "path": "template/src/index.ts",
+                "type": "file",
+                "language": "typescript"
+              },
+              {
+                "name": "middleware",
+                "path": "template/src/middleware",
+                "type": "folder",
+                "children": [
+                  {
+                    "name": "errorMiddleware.ts",
+                    "path": "template/src/middleware/errorMiddleware.ts",
+                    "type": "file",
+                    "language": "typescript"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "tsconfig.json",
+            "path": "template/tsconfig.json",
+            "type": "file",
+            "language": "json"
+          }
+        ]
+      }
+    ]
+  },
+  "react-img-component": {
+    "name": "react-img-component",
+    "path": "react-img-component",
+    "type": "folder",
+    "children": [
+      {
+        "name": "ReadME.md",
+        "path": "ReadME.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "package.json",
+        "path": "package.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "src",
+        "path": "src",
+        "type": "folder",
+        "children": [
+          {
+            "name": "Image.tsx",
+            "path": "src/Image.tsx",
+            "type": "file",
+            "language": "typescript"
+          },
+          {
+            "name": "index.ts",
+            "path": "src/index.ts",
+            "type": "file",
+            "language": "typescript"
+          }
+        ]
+      },
+      {
+        "name": "tsconfig.json",
+        "path": "tsconfig.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "tsup.config.ts",
+        "path": "tsup.config.ts",
+        "type": "file",
+        "language": "typescript"
+      }
+    ]
+  },
+  "solar-system": {
+    "name": "solar-system",
+    "path": "solar-system",
+    "type": "folder",
+    "children": [
+      {
+        "name": "README.md",
+        "path": "README.md",
+        "type": "file",
+        "language": "markdown"
+      },
+      {
+        "name": "index.html",
+        "path": "index.html",
+        "type": "file",
+        "language": "html"
+      },
+      {
+        "name": "main.js",
+        "path": "main.js",
+        "type": "file",
+        "language": "javascript"
+      },
+      {
+        "name": "package.json",
+        "path": "package.json",
+        "type": "file",
+        "language": "json"
+      },
+      {
+        "name": "style.css",
+        "path": "style.css",
+        "type": "file",
+        "language": "css"
+      }
+    ]
+  }
+}

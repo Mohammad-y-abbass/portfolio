@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>The Cartographer's Study — An Escape Room</title>
+    <link rel="stylesheet" href="src/escape-room.css" />
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="bezel">
+        <canvas id="game" tabindex="0"></canvas>
+        <div id="startOverlay"><span>&gt; CLICK TO POWER ON _</span></div>
+      </div>
+      <div id="caption">
+        THE CARTOGRAPHER'S STUDY // WASD-ARROWS MOVE // E-CLICK INTERACT // H
+        HINT
+      </div>
+      <div id="mobileControls">
+        <div id="dpad">
+          <button id="btnUp">▲</button>
+          <button id="btnDown">▼</button>
+          <button id="btnLeft">◀</button>
+          <button id="btnRight">▶</button>
+        </div>
+        <div id="actionButtons">
+          <button id="btnInteract">E</button>
+          <button id="btnHint">H</button>
+          <button id="btnNotes">N</button>
+        </div>
+      </div>
+    </div>
+    <script type="module">
+      import { initEscapeRoom } from "./src/escape-room.js";
+
+      const canvas = document.getElementById("game");
+      const startOverlay = document.getElementById("startOverlay");
+
+      // Initialize the game when the page loads
+      window.addEventListener("load", () => {
+        initEscapeRoom(canvas, startOverlay);
+      });
+    </script>
+  </body>
+</html>

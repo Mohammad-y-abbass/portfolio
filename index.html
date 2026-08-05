@@ -1,0 +1,1138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mohammad Abbass — Full Stack Engineer</title>
+    <meta
+      name="description"
+      content="Mohammad Abbass — Full Stack Engineer. Retro CRT portfolio terminal."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000a00'/%3E%3Crect x='4' y='4' width='24' height='24' fill='none' stroke='%2300ff41' stroke-width='2'/%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="page">
+      <div class="crt-unit" id="crt-unit">
+        <!-- Monitor casing -->
+        <div class="crt-shell">
+          <div class="crt-shell-highlight" aria-hidden="true"></div>
+
+          <!-- Top bezel -->
+          <div class="crt-top-bezel">
+            <span class="crt-brand">PORTFOLIO</span>
+            <span class="crt-model-label">DISPLAY · VER 1.0</span>
+            <span class="crt-online">&lt; ONLINE &gt;</span>
+          </div>
+
+          <!-- Screen well -->
+          <div class="crt-screen-well">
+            <div class="crt-screen-bezel">
+              <div class="crt-screen" id="crt-screen">
+                <!-- Boot overlay -->
+                <div class="boot-overlay" id="boot-overlay" aria-hidden="true">
+                  <pre class="boot-text" id="boot-text"></pre>
+                </div>
+
+                <!-- Channel static transition -->
+                <div
+                  class="channel-static"
+                  id="channel-static"
+                  aria-hidden="true"
+                ></div>
+
+                <!-- CRT effects -->
+                <div class="scanlines" aria-hidden="true"></div>
+                <div class="screen-glow" aria-hidden="true"></div>
+                <div class="screen-vignette" aria-hidden="true"></div>
+                <div class="screen-flicker" aria-hidden="true"></div>
+                <div class="glitch-layer" aria-hidden="true"></div>
+
+                <!-- Screen content -->
+                <div class="screen-content" id="screen-content">
+                  <!-- Navigation -->
+                  <nav class="screen-nav" aria-label="Sections">
+                    <button class="nav-tab active" data-section="about">
+                      <span class="nav-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="16" height="16">
+                          <rect
+                            x="2"
+                            y="2"
+                            width="12"
+                            height="12"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <circle cx="8" cy="6" r="2" fill="currentColor" />
+                          <path
+                            d="M4 13c0-2.2 1.8-4 4-4s4 1.8 4 4"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </span>
+                      <span class="nav-label">01 ABOUT</span>
+                    </button>
+                    <button class="nav-tab" data-section="stack">
+                      <span class="nav-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="16" height="16">
+                          <rect
+                            x="3"
+                            y="3"
+                            width="10"
+                            height="10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M6 1v2M10 1v2M6 13v2M10 13v2M1 6h2M1 10h2M13 6h2M13 10h2"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <rect
+                            x="6"
+                            y="6"
+                            width="4"
+                            height="4"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </span>
+                      <span class="nav-label">02 TECH STACK</span>
+                    </button>
+                    <button class="nav-tab" data-section="projects">
+                      <span class="nav-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="16" height="16">
+                          <rect
+                            x="1"
+                            y="3"
+                            width="14"
+                            height="10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M1 6h14"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </span>
+                      <span class="nav-label">03 PROJECTS</span>
+                    </button>
+                    <button class="nav-tab" data-section="writing">
+                      <span class="nav-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="16" height="16">
+                          <rect
+                            x="3"
+                            y="1"
+                            width="10"
+                            height="14"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M5 5h6M5 8h6M5 11h4"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </span>
+                      <span class="nav-label">04 WRITING</span>
+                    </button>
+                    <button class="nav-tab" data-section="contact">
+                      <span class="nav-icon" aria-hidden="true">
+                        <svg viewBox="0 0 16 16" width="16" height="16">
+                          <rect
+                            x="1"
+                            y="3"
+                            width="14"
+                            height="10"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                          <path
+                            d="M1 4l7 5 7-5"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.5"
+                          />
+                        </svg>
+                      </span>
+                      <span class="nav-label">05 CONTACT</span>
+                    </button>
+                  </nav>
+
+                  <!-- Sections -->
+                  <main class="screen-main">
+                    <!-- ABOUT -->
+                    <section
+                      class="panel active"
+                      id="panel-about"
+                      data-panel="about"
+                    >
+                      <div class="about-grid">
+                        <aside class="col-left">
+                          <div class="avatar-frame">
+                            <img
+                              class="about-image"
+                              src="/image.png"
+                              alt="Portrait of Mohammad Abbass"
+                            />
+                          </div>
+                          <div class="about-sys-box">
+                            <div class="sys-box-row">
+                              <span class="sys-label">ENGINEER:</span>
+                              <span class="sys-val">M. ABBASS</span>
+                            </div>
+                            <div class="sys-box-row">
+                              <span class="sys-label">ROLE:</span>
+                              <span class="sys-val">FULL STACK</span>
+                            </div>
+                            <div class="sys-box-row">
+                              <span class="sys-label">LOC:</span>
+                              <span class="sys-val">BEIRUT, LB</span>
+                            </div>
+                            <div class="sys-box-row">
+                              <span class="sys-label">EXP:</span>
+                              <span class="sys-val">2+ YEARS</span>
+                            </div>
+                          </div>
+                        </aside>
+
+                        <div class="col-center">
+                          <div class="hero-header-group">
+                            <h1 class="hero-name">MOHAMMAD ABBASS</h1>
+                            <div class="hero-subtitle">FULL-STACK ENGINEER</div>
+                          </div>
+
+                          <!-- Callout Banner -->
+                          <div class="about-quote-box">
+                            <div class="quote-symbol">&gt;&gt;</div>
+                            <div class="quote-content">
+                              "Software is the invisible machinery that turns
+                              raw information into decisions and products people
+                              rely on every day.
+                              <strong>I build that machinery.</strong>"
+                            </div>
+                          </div>
+
+                          <!-- Bio Sections Grid -->
+                          <div class="bio-cards">
+                            <div class="bio-card">
+                              <div class="bio-card-header">
+                                <span class="card-num">01</span>
+                                <span class="card-title"
+                                  >FULL-CYCLE OWNERSHIP</span
+                                >
+                              </div>
+                              <p class="card-body">
+                                From data processing &amp; backend systems to
+                                modern web applications and deployment
+                                pipelines—I enjoy owning the full journey from
+                                idea to production.
+                              </p>
+                            </div>
+
+                            <div class="bio-card">
+                              <div class="bio-card-header">
+                                <span class="card-num">02</span>
+                                <span class="card-title"
+                                  >ENGINEERING PHILOSOPHY</span
+                                >
+                              </div>
+                              <p class="card-body">
+                                I believe the best engineering is invisible.
+                                When data arrives on time, the interface feels
+                                natural, and everything just works, that is the
+                                result I aim for.
+                              </p>
+                            </div>
+
+                            <div class="bio-card">
+                              <div class="bio-card-header">
+                                <span class="card-num">03</span>
+                                <span class="card-title"
+                                  >SPEED &amp; RELIABILITY</span
+                                >
+                              </div>
+                              <p class="card-body">
+                                Focused on creating systems that are fast,
+                                reliable, and simple to work with, even when the
+                                real-world problems behind them are anything
+                                but.
+                              </p>
+                            </div>
+
+                            <div class="bio-card escape-room-card">
+                              <div class="bio-card-header">
+                                <span class="card-num">04</span>
+                                <span class="card-title"
+                                  >THE STUDY OF LIGHT</span
+                                >
+                              </div>
+                              <p class="card-body">
+                                A minimalist escape room puzzle I designed.
+                                Observe carefully. The answer is always there.
+                              </p>
+                              <a href="escape-room.html" class="escape-room-btn">
+                                [ PLAY PUZZLE ]
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-- TECH STACK -->
+                    <section class="panel" id="panel-stack" data-panel="stack">
+                      <div class="stack-grid">
+                        <!-- LANGUAGES -->
+                        <div class="stack-category">
+                          <div class="cat-header">
+                            <span class="cat-icon">&gt;_</span>
+                            <span class="cat-title">01. LANGUAGES</span>
+                          </div>
+                          <div class="stack-items">
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">JavaScript</span>
+                              <span class="item-badge">ES6+</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">TypeScript</span>
+                              <span class="item-badge">Strict</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Python</span>
+                              <span class="item-badge">3.x</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Go</span>
+                              <span class="item-badge">1.x</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- FRONTEND -->
+                        <div class="stack-category">
+                          <div class="cat-header">
+                            <span class="cat-icon">◆</span>
+                            <span class="cat-title">02. FRONTEND</span>
+                          </div>
+                          <div class="stack-items">
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">React</span>
+                              <span class="item-badge">UI Library</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Next.js</span>
+                              <span class="item-badge">Framework</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- BACKEND -->
+                        <div class="stack-category">
+                          <div class="cat-header">
+                            <span class="cat-icon">⚡</span>
+                            <span class="cat-title"
+                              >03. BACKEND &amp; APIS</span
+                            >
+                          </div>
+                          <div class="stack-items">
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Node.js</span>
+                              <span class="item-badge">Runtime</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Express</span>
+                              <span class="item-badge">REST API</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">NestJS</span>
+                              <span class="item-badge">Enterprise</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Flask</span>
+                              <span class="item-badge">Micro-FW</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">FastAPI</span>
+                              <span class="item-badge">Async API</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Gin</span>
+                              <span class="item-badge">Go Router</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- TESTING & TOOLING -->
+                        <div class="stack-category">
+                          <div class="cat-header">
+                            <span class="cat-icon">⚙</span>
+                            <span class="cat-title"
+                              >04. TESTING &amp; AUTOMATION</span
+                            >
+                          </div>
+                          <div class="stack-items">
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Vitest</span>
+                              <span class="item-badge">Unit Test</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Playwright</span>
+                              <span class="item-badge">E2E / QA</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- DATABASES -->
+                        <div class="stack-category">
+                          <div class="cat-header">
+                            <span class="cat-icon">▤</span>
+                            <span class="cat-title">05. DATABASES</span>
+                          </div>
+                          <div class="stack-items">
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">MySQL</span>
+                              <span class="item-badge">Relational</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">PostgreSQL</span>
+                              <span class="item-badge">Relational</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- DEVOPS -->
+                        <div class="stack-category">
+                          <div class="cat-header">
+                            <span class="cat-icon">🔧</span>
+                            <span class="cat-title">06. DEVOPS</span>
+                          </div>
+                          <div class="stack-items">
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">Docker</span>
+                              <span class="item-badge">Containers</span>
+                            </div>
+                            <div class="stack-item">
+                              <span class="item-dot">●</span>
+                              <span class="item-name">GitHub Actions</span>
+                              <span class="item-badge">CI/CD</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-- PROJECTS -->
+                    <section
+                      class="panel"
+                      id="panel-projects"
+                      data-panel="projects"
+                    >
+                      <div class="projects-grid">
+                        <!-- MoDB -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[SYS]</span>
+                              <span class="proj-status">● VER 1.0</span>
+                            </div>
+                            <h3 class="proj-title">MoDB</h3>
+                          </div>
+                          <p class="proj-desc">
+                            A SQL relational database built from scratch in Go
+                            to explore the internals of modern database systems.
+                            It features a custom storage engine with persistent
+                            on-disk storage, a SQL lexer, parser, query planner,
+                            execution engine, and a TCP client/server
+                            architecture
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">Go</span>
+                            <span class="proj-tech">SQL</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="moDB"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/moDB"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- Mo Language -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[COM]</span>
+                              <span class="proj-status">● VER 1.0</span>
+                            </div>
+                            <h3 class="proj-title">Mo Language</h3>
+                          </div>
+                          <p class="proj-desc">
+                            A custom programming language with a symbol-based
+                            syntax that transpiles to JavaScript. Built with a
+                            Nearley parser, it supports variables, functions,
+                            control flow, arrays, and dynamic typing while
+                            exploring the fundamentals of compiler and language
+                            design.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">JavaScript</span>
+                            <span class="proj-tech">Nearley.js</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="mo-language"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/mo-programming-language"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- Job Match Agent -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[TOOL]</span>
+                              <span class="proj-status">● VER 1.0</span>
+                            </div>
+                            <h3 class="proj-title">Job Match Agent</h3>
+                          </div>
+                          <p class="proj-desc">
+                            An intelligent job discovery agent that uses
+                            Playwright to scrape job boards and performs
+                            semantic matching between candidate profiles and job
+                            requirements using NLP to find the best career
+                            opportunities.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">Python</span>
+                            <span class="proj-tech">Playwright</span>
+                            <span class="proj-tech">Gemini</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="job-match-agent"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/job-match-agent"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- JS Code Editor -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[WEB]</span>
+                              <span class="proj-status">● LIVE</span>
+                            </div>
+                            <h3 class="proj-title">JS Code Editor</h3>
+                          </div>
+                          <p class="proj-desc">
+                            A fully-featured in-browser React/JSX development
+                            environment. Integrates Monaco Editor for code
+                            editing and uses WebAssembly ESBuild for fast
+                            compilation, enabling real-time code execution
+                            without server dependencies.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">React</span>
+                            <span class="proj-tech">TypeScript</span>
+                            <span class="proj-tech">Monaco Editor</span>
+                            <span class="proj-tech">esbuild-wasm</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="code-editor"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://online-js-code-editor.netlify.app/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >live demo ↗</a
+                            >
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/code-editor"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- Rapid Express -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[TOOL]</span>
+                              <span class="proj-status">● NPM</span>
+                            </div>
+                            <h3 class="proj-title">Rapid Express</h3>
+                          </div>
+                          <p class="proj-desc">
+                            A CLI tool that generates production-ready
+                            Express.js applications with TypeScript, Prisma,
+                            class-based architecture, and custom decorators. It
+                            reduces boilerplate by automating project setup,
+                            routing, validation, authentication, and error
+                            handling.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">Node.js</span>
+                            <span class="proj-tech">Express</span>
+                            <span class="proj-tech">TypeScript</span>
+                            <span class="proj-tech">Prisma</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="rapid-express"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://www.npmjs.com/package/@mohammad-abbass/rapid-express"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >npm ↗</a
+                            >
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/rapid-express"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- Solar System -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[WEB]</span>
+                              <span class="proj-status">● LIVE</span>
+                            </div>
+                            <h3 class="proj-title">Solar System</h3>
+                          </div>
+                          <p class="proj-desc">
+                            An interactive 3D solar system simulation using
+                            Three.js and WebGL. Features realistic planetary
+                            orbits, celestial body textures, dynamic lighting
+                            effects, and smooth camera controls for exploring
+                            the solar system.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">JavaScript</span>
+                            <span class="proj-tech">Three.js</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="solar-system"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://mini-solar-system.netlify.app/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >live demo ↗</a
+                            >
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/solar-system"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- Mearch -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[MCP]</span>
+                              <span class="proj-status">● VER 1.0</span>
+                            </div>
+                            <h3 class="proj-title">Mearch</h3>
+                          </div>
+                          <p class="proj-desc">
+                            A local-first code intelligence engine that
+                            transforms codebases into semantic graphs for AI
+                            agents. It uses parsing, graph traversal, and
+                            intelligent retrieval to provide precise code
+                            context while reducing unnecessary file exploration
+                            and token usage.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">Go</span>
+                            <span class="proj-tech">MCP</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="mearch"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/mearch"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- React Img Component -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[LIB]</span>
+                              <span class="proj-status">● NPM</span>
+                            </div>
+                            <h3 class="proj-title">React Img Component</h3>
+                          </div>
+                          <p class="proj-desc">
+                            A high-performance React image component featuring
+                            lazy loading, blur-up placeholders, responsive
+                            images, and automatic optimization. Reduces initial
+                            page load time and improves Core Web Vitals scores.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">React</span>
+                            <span class="proj-tech">TypeScript</span>
+                          </div>
+                          <div class="proj-links">
+                            <button
+                              class="proj-btn code-view-btn"
+                              data-project="react-img-component"
+                            >
+                              &lt;/&gt; view code
+                            </button>
+                            <a
+                              class="proj-btn"
+                              href="https://www.npmjs.com/package/@mohammad-abbass/react-img-component"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >npm ↗</a
+                            >
+                            <a
+                              class="proj-btn"
+                              href="https://github.com/Mohammad-y-abbass/react-img-component"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >github ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- LearnDevs -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[WEB]</span>
+                              <span class="proj-status">● LIVE</span>
+                            </div>
+                            <h3 class="proj-title">LearnDevs</h3>
+                          </div>
+                          <p class="proj-desc">
+                            An all-in-one developer hub that curates the best
+                            programming courses, GitHub repositories, and remote
+                            job opportunities. Features advanced filtering, tech
+                            news aggregation, and a vibrant developer community
+                            for career growth.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">Next.js</span>
+                            <span class="proj-tech">TypeScript</span>
+                            <span class="proj-tech">Tailwind CSS</span>
+                            <span class="proj-tech">Go</span>
+                            <span class="proj-tech">Gin</span>
+                            <span class="proj-tech">Python</span>
+                            <span class="proj-tech">MySQL</span>
+                            <span class="proj-tech">Playwright</span>
+                          </div>
+                          <div class="proj-links">
+                            <a
+                              class="proj-btn"
+                              href="https://learndevs.com"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >visit site ↗</a
+                            >
+                          </div>
+                        </div>
+
+                        <!-- Places4Students -->
+                        <div class="project-card">
+                          <div class="proj-header">
+                            <div class="proj-top">
+                              <span class="proj-tag">[WEB]</span>
+                              <span class="proj-status">● LIVE</span>
+                            </div>
+                            <h3 class="proj-title">Places4Students</h3>
+                          </div>
+                          <p class="proj-desc">
+                            North America's leading off-campus student housing
+                            platform trusted by 245+ colleges and universities.
+                            Connects students with safe, affordable housing
+                            while providing landlords with quality tenant leads
+                            and comprehensive listing management tools.
+                          </p>
+                          <div class="proj-stack">
+                            <span class="proj-tech">Next.js</span>
+                            <span class="proj-tech">Node.js</span>
+                            <span class="proj-tech">PostgreSQL</span>
+                            <span class="proj-tech">Mapbox</span>
+                          </div>
+                          <div class="proj-links">
+                            <a
+                              class="proj-btn"
+                              href="https://www.places4students.com"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >visit site ↗</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-- WRITING -->
+                    <section
+                      class="panel"
+                      id="panel-writing"
+                      data-panel="writing"
+                    >
+                      <h2 class="panel-title">WRITING</h2>
+                      <div class="writing-intro">
+                        <p>
+                          Technical articles and tutorials on software
+                          engineering, databases, and modern web development.
+                        </p>
+                      </div>
+                      <div class="log-table">
+                        <div class="log-row">
+                          <span class="log-name"
+                            ><a
+                              href="https://learndevs.com/blogs/building-your-own-database-from-scratch-in-go-part-1-introduction-90004"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >Building Your Own Database from Scratch in Go</a
+                            ></span
+                          >
+                          <span class="log-desc"
+                            >Complete guide to building a relational database
+                            engine from the ground up</span
+                          >
+                          <a
+                            class="log-link"
+                            href="https://learndevs.com/blogs/building-your-own-database-from-scratch-in-go-part-1-introduction-90004"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >read ↗</a
+                          >
+                        </div>
+                        <div class="log-row">
+                          <span class="log-name"
+                            ><a
+                              href="https://learndevs.com/blogs/what-is-a-large-language-model-90010"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >What Is a Large Language Model</a
+                            ></span
+                          >
+                          <span class="log-desc"
+                            >Understanding LLMs: tokenization, embeddings,
+                            attention mechanisms, and training</span
+                          >
+                          <a
+                            class="log-link"
+                            href="https://learndevs.com/blogs/what-is-a-large-language-model-90010"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >read ↗</a
+                          >
+                        </div>
+                        <div class="log-row">
+                          <span class="log-name"
+                            ><a
+                              href="https://learndevs.com/blogs/the-javascript-event-loop-a-complete-guide-90011"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              >The JavaScript Event Loop: A Complete Guide</a
+                            ></span
+                          >
+                          <span class="log-desc"
+                            >Deep dive into asynchronous JavaScript: call stack,
+                            microtasks, and macrotasks</span
+                          >
+                          <a
+                            class="log-link"
+                            href="https://learndevs.com/blogs/the-javascript-event-loop-a-complete-guide-90011"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            >read ↗</a
+                          >
+                        </div>
+                      </div>
+                    </section>
+
+                    <!-- CONTACT -->
+                    <section
+                      class="panel"
+                      id="panel-contact"
+                      data-panel="contact"
+                    >
+                      <h2 class="panel-title">CONTACT</h2>
+                      <div class="contact-intro">
+                        <p>
+                          Interested in working together? I'm currently open to
+                          new opportunities and collaborations.
+                        </p>
+                      </div>
+                      <div class="contact-methods">
+                        <div class="contact-item">
+                          <div class="contact-icon">✉</div>
+                          <div class="contact-details">
+                            <h3>Email</h3>
+                            <a
+                              href="mailto:mhmd.y.abbass@gmail.com"
+                              class="contact-link"
+                              >mhmd.y.abbass@gmail.com</a
+                            >
+                          </div>
+                        </div>
+                        <div class="contact-item">
+                          <div class="contact-icon">💼</div>
+                          <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <a
+                              href="https://linkedin.com/in/mohammad-abbass/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="contact-link"
+                              >linkedin.com/in/mohammad-abbass</a
+                            >
+                          </div>
+                        </div>
+                        <div class="contact-item">
+                          <div class="contact-icon">🐙</div>
+                          <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <a
+                              href="https://github.com/mohammad-y-abbass"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="contact-link"
+                              >github.com/mohammad-y-abbass</a
+                            >
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </main>
+
+                  <!-- Easter egg sprite -->
+                  <div
+                    class="invader-sprite"
+                    id="invader-sprite"
+                    aria-hidden="true"
+                  >
+                    <svg viewBox="0 0 11 8" width="22" height="16">
+                      <rect x="3" y="0" width="5" height="1" fill="#00ff41" />
+                      <rect x="2" y="1" width="7" height="1" fill="#00ff41" />
+                      <rect x="1" y="2" width="2" height="1" fill="#00ff41" />
+                      <rect x="4" y="2" width="3" height="1" fill="#00ff41" />
+                      <rect x="8" y="2" width="2" height="1" fill="#00ff41" />
+                      <rect x="0" y="3" width="11" height="2" fill="#00ff41" />
+                      <rect x="1" y="5" width="3" height="1" fill="#00ff41" />
+                      <rect x="7" y="5" width="3" height="1" fill="#00ff41" />
+                      <rect x="0" y="6" width="2" height="1" fill="#00ff41" />
+                      <rect x="9" y="6" width="2" height="1" fill="#00ff41" />
+                    </svg>
+                  </div>
+                  <!-- Code Editor Overlay / Modal -->
+                  <div
+                    class="editor-modal"
+                    id="editor-modal"
+                    aria-hidden="true"
+                  >
+                    <div class="editor-window">
+                      <header class="editor-window-header">
+                        <div class="editor-window-title">
+                          <span class="editor-brand">[ CODE VIEWER ]</span>
+                          <span class="editor-filepath" id="editor-filepath"
+                            >~/moDB/main.go</span
+                          >
+                        </div>
+                        <div class="editor-window-controls">
+                          <select
+                            id="editor-project-select"
+                            class="editor-project-select"
+                          >
+                            <option value="moDB">moDB</option>
+                            <option value="mo-language">mo-language</option>
+                            <option value="job-match-agent">
+                              job-match-agent
+                            </option>
+                            <option value="code-editor">code-editor</option>
+                            <option value="rapid-express">rapid-express</option>
+                            <option value="solar-system">solar-system</option>
+                            <option value="mearch">mearch</option>
+                            <option value="react-img-component">
+                              react-img-component
+                            </option>
+                            <option value="learndevs">learndevs</option>
+                            <option value="places4students">
+                              places4students
+                            </option>
+                          </select>
+                          <button
+                            class="editor-close-btn"
+                            id="editor-close-btn"
+                            aria-label="Close Code Editor"
+                          >
+                            [ X CLOSE ]
+                          </button>
+                        </div>
+                      </header>
+
+                      <div class="editor-window-body">
+                        <aside class="editor-sidebar">
+                          <div class="sidebar-title">EXPLORER</div>
+                          <div class="file-tree" id="file-tree"></div>
+                        </aside>
+
+                        <main class="editor-code-container">
+                          <div class="code-scroll-area" id="code-scroll-area">
+                            <div class="code-view" id="code-view"></div>
+                          </div>
+                        </main>
+                      </div>
+
+                      <footer class="editor-footer">
+                        <span class="editor-stat" id="editor-stat-lang"
+                          >LANG: GO</span
+                        >
+                        <span class="editor-stat" id="editor-stat-lines"
+                          >LINES: 0</span
+                        >
+                        <span class="editor-stat">MODE: READ-ONLY</span>
+                        <button class="editor-copy-btn" id="editor-copy-btn">
+                          [ COPY CODE ]
+                        </button>
+                      </footer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom control panel -->
+          <div class="crt-bottom-panel">
+            <div class="panel-logo">
+              <span class="logo-text">MO<br />ABBASS</span>
+            </div>
+            <div class="panel-controls">
+              <div class="control-group">
+                <div class="knob" aria-hidden="true">
+                  <div class="knob-dial"></div>
+                </div>
+                <span class="control-label">BRIGHTNESS</span>
+              </div>
+              <div class="control-group">
+                <div class="contrast-btn" aria-hidden="true"></div>
+                <span class="control-label">CONTRAST</span>
+              </div>
+            </div>
+            <div class="panel-badge">
+              <span>CRT-14</span>
+              <span class="badge-sub">MONOCHROME DISPLAY</span>
+            </div>
+            <div class="floppy-drive" aria-hidden="true">
+              <div class="floppy-slot"></div>
+            </div>
+            <div class="power-group">
+              <button class="power-btn" id="power-btn" aria-label="Power">
+                <span class="power-led" id="power-led"></span>
+              </button>
+              <span class="control-label">POWER</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

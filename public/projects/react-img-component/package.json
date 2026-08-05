@@ -1,0 +1,55 @@
+{
+  "name": "react-img-component",
+  "version": "1.0.3",
+  "description": "A responsive lazy-loading image component for React",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "keywords": [
+    "react",
+    "image",
+    "lazy-loading",
+    "responsive",
+    "component",
+    "react-image",
+    "react-component",
+    "image-component",
+    "webp",
+    "progressive",
+    "blur-up",
+    "placeholder",
+    "optimization",
+    "performance",
+    "compression",
+    "srcset",
+    "picture",
+    "frontend",
+    "ui",
+    "gallery",
+    "loading",
+    "next-image",
+    "img",
+    "thumbnail",
+    "preview",
+    "lightweight",
+    "web-performance",
+    "responsive-images"
+  ],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}

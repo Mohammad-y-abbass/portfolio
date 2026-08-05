@@ -1,0 +1,33 @@
+{
+  "name": "dev-scouter",
+  "version": "1.0.0",
+  "description": "Multi-engine web scraper for job websites",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "scrape": "ts-node src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "axios": "^1.18.0",
+    "cheerio": "^1.2.0",
+    "dotenv": "^17.4.2",
+    "html-to-text": "^10.0.0",
+    "node-cron": "^4.4.1",
+    "playwright": "^1.61.0"
+  },
+  "devDependencies": {
+    "@types/cheerio": "^0.22.35",
+    "@types/html-to-text": "^9.0.4",
+    "@types/node": "^26.0.0",
+    "@types/node-cron": "^3.0.11",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}

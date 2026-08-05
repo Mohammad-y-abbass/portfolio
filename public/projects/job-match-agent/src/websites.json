@@ -1,0 +1,247 @@
+{
+  "websites": [
+    {
+      "name": "hirelebanese",
+      "baseUrl": "https://hirelebanese.com",
+      "type": "static",
+      "listings": {
+        "url": "https://hirelebanese.com/searchresults.aspx?order=date&keywords=&category=10&type=&duration=&country=117,241,258,259,260&state=&city=&emp=&pg=1&s=-1&top=0",
+        "pagination": {
+          "enabled": true,
+          "param": "pg",
+          "maxPages": 10,
+          "startPage": 1
+        },
+        "jobCardSelector": "div.panel.panel-default.jobs-margin",
+        "fields": {
+          "title": { "selector": "div.panel-title h4 a", "type": "text" },
+          "url": { "selector": "div.panel-title h4 a", "type": "href" },
+          "companyLocation": { "selector": "div.row div.col-xs-9", "type": "text", "index": 0 },
+          "datePostedRaw": { "selector": "div.row div.col-xs-12[style*='color: gray']", "type": "text" },
+          "summary": { "selector": "div.row div.col-xs-12:not([style])", "type": "text" }
+        }
+      },
+      "details": {
+        "urlTemplate": "https://hirelebanese.com/jobdetails.aspx?id={id}",
+        "fields": {
+          "title": { "selector": "#title", "type": "text" },
+          "company": { "selector": "#company", "type": "text" },
+          "category": { "selector": "#category", "type": "text" },
+          "location": { "selector": "#location", "type": "text" },
+          "datePostedRaw": { "selector": "#date", "type": "text" },
+          "salary": { "selector": "#salary", "type": "text" },
+          "employeeType": { "selector": "#employee_type", "type": "text" },
+          "description": { "selector": "#description", "type": "html" }
+        }
+      },
+      "dateParse": { "format": "Posted at MMM DD, YYYY", "timezone": "UTC" }
+    },
+    {
+      "name": "weworkremotely",
+      "baseUrl": "https://weworkremotely.com",
+      "type": "static",
+      "listings": {
+        "url": "https://weworkremotely.com/",
+        "jobCardSelector": "section.jobs li.new-listing-container",
+        "fields": {
+          "title": { "selector": "h3.new-listing__header__title span.new-listing__header__title__text", "type": "text" },
+          "url": { "selector": "a.listing-link--unlocked", "type": "href" },
+          "company": { "selector": "p.new-listing__company-name", "type": "text" },
+          "location": { "selector": "p.new-listing__company-headquarters", "type": "text" },
+          "datePostedRaw": { "selector": "p.new-listing__header__icons__date", "type": "text" },
+          "categories": { "selector": "div.new-listing__categories", "type": "text" }
+        }
+      },
+      "dateParse": { "format": "relative", "timezone": "UTC", "relative": true },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "title": { "selector": "h1.lis-container__header__hero__company-info__title", "type": "text" },
+          "company": { "selector": "div.lis-container__job__sidebar__companyDetails__info__title", "type": "text" },
+          "location": { "selector": "li.lis-container__job__sidebar__job-about__list__item:contains(\"Region\") a", "type": "text" },
+          "jobType": { "selector": "li.lis-container__job__sidebar__job-about__list__item:contains(\"Job type\") a", "type": "text" },
+          "category": { "selector": "li.lis-container__job__sidebar__job-about__list__item:contains(\"Category\") a", "type": "text" },
+          "skills": { "selector": "li.lis-container__job__sidebar__job-about__list__item:contains(\"Skills\") a", "type": "text" },
+          "salary": { "selector": "li.lis-container__job__sidebar__job-about__list__item:contains(\"Salary\") a", "type": "text" },
+          "description": { "selector": "div.lis-container__job__content__description", "type": "html" }
+        }
+      }
+    },
+    {
+      "name": "remocate",
+      "baseUrl": "https://www.remocate.app",
+      "type": "static",
+      "listings": {
+        "url": "https://www.remocate.app/",
+        "jobCardSelector": "div[role=\"listitem\"].w-dyn-item",
+        "fields": {
+          "title": { "selector": "div.job-title", "type": "text" },
+          "url": { "selector": "a.job-card.w-inline-block", "type": "href" },
+          "company": { "selector": "div[fs-cmsfilter-field=\"company\"]", "type": "text" },
+          "location": { "selector": "div.job-card_tag[fs-cmsfilter-field=\"location\"]", "type": "text", "index": 0 },
+          "datePostedRaw": { "selector": "div.job-date.home-date", "type": "text" },
+          "jobType": { "selector": "div.job-card_tag[fs-cmsfilter-field=\"type\"]", "type": "text", "index": 0 },
+          "category": { "selector": "div.job-card_tag[fs-cmsfilter-field=\"category\"]", "type": "text", "index": 0 }
+        }
+      },
+      "dateParse": { "format": "MMM DD, YYYY", "timezone": "UTC" },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "description": { "selector": "div.job-content", "type": "html" }
+        }
+      }
+    },
+    {
+      "name": "beirutdigitaldistrict",
+      "baseUrl": "https://careers.beirutdigitaldistrict.com",
+      "type": "static",
+      "skipDateFilter": true,
+      "listings": {
+        "url": "https://careers.beirutdigitaldistrict.com/jobs?page=1",
+        "pagination": {
+          "enabled": true,
+          "param": "page",
+          "maxPages": 10,
+          "startPage": 1
+        },
+        "jobCardSelector": "div.job-listing.wtabs",
+        "fields": {
+          "title": { "selector": "div.job-title-sec h3 a", "type": "text" },
+          "url": { "selector": "div.job-title-sec h3 a", "type": "href" },
+          "company": { "selector": "span.companyName", "type": "text" },
+          "location": { "selector": "span.job-lctn", "type": "text" },
+          "deadline": { "selector": "div.job-style-bx i", "type": "text" },
+          "employmentType": { "selector": "span.job-is.ft", "type": "text" },
+          "categories": { "selector": "div.job-style-bx.categories-list", "type": "text" }
+        }
+      },
+      "dateParse": { "format": "MMM DD, YYYY", "timezone": "UTC" },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "title": { "selector": "div.job-title2", "type": "text" },
+          "company": { "selector": "div.job-head-info h4", "type": "text" },
+          "description": { "selector": "div.job-details", "type": "html" }
+        }
+      }
+    },
+    {
+      "name": "murex",
+      "baseUrl": "https://murex.wd3.myworkdayjobs.com",
+      "type": "dynamic",
+      "skipDateFilter": true,
+      "listings": {
+        "url": "https://murex.wd3.myworkdayjobs.com/MurexCareerPage1?jobFamilyGroup=7b20c72b34771000c4278d6b0e690002&jobFamilyGroup=7b20c72b34771000c4278fd2412c0001&jobFamilyGroup=7b20c72b34771000c4278f385ebc0002&locations=4e70ce22e010100201f430535a7a0000",
+        "jobCardSelector": "li",
+        "fields": {
+          "title": { "selector": "a[data-automation-id='jobTitle']", "type": "text" },
+          "url": { "selector": "a[data-automation-id='jobTitle']", "type": "href" },
+          "location": { "selector": "[data-automation-id='locations']", "type": "text" },
+          "datePostedRaw": { "selector": "[data-automation-id='postedOn']", "type": "text" },
+          "jobId": { "selector": "[data-automation-id='subtitle']", "type": "text" }
+        }
+      },
+      "dateParse": { "format": "relative", "timezone": "UTC", "relative": true },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "description": { "selector": "[data-automation-id='jobPostingDescription']", "type": "html" },
+          "employmentType": { "selector": "[data-automation-id='time']", "type": "text" },
+          "requisitionId": { "selector": "[data-automation-id='requisitionId']", "type": "text" }
+        }
+      }
+    },
+    {
+      "name": "cme",
+      "baseUrl": "https://gotocme.zohorecruit.com",
+      "type": "dynamic",
+      "skipDateFilter": true,
+      "listings": {
+        "url": "https://gotocme.zohorecruit.com/careers",
+        "jobCardSelector": "career-website-job-listing-layout1",
+        "fields": {
+          "title": { "selector": "h3 a[href*='/jobs/Careers/']", "type": "text" },
+          "url": { "selector": "h3 a[href*='/jobs/Careers/']", "type": "href" },
+          "location": { "selector": "lyte-text", "type": "text" },
+          "employmentType": { "selector": "span.cw-full-time", "type": "text" }
+        }
+      },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "description": { "selector": ".cw-jobdescription", "type": "html" }
+        }
+      }
+    },
+    {
+      "name": "malia",
+      "baseUrl": "https://www.joinmalia.com",
+      "type": "dynamic",
+      "skipDateFilter": true,
+      "listings": {
+        "url": "https://www.joinmalia.com/malia-hr/english/vacancies",
+        "jobCardSelector": "table.rwd-table tbody tr",
+        "fields": {
+          "title": { "selector": "td.title a", "type": "text" },
+          "url": { "selector": "td.title a", "type": "href" },
+          "company": { "selector": "td:nth-child(4)", "type": "text" },
+          "location": { "selector": "td:nth-child(5)", "type": "text" },
+          "employmentType": { "selector": "td:nth-child(3)", "type": "text" },
+          "function": { "selector": "td:nth-child(2)", "type": "text" },
+          "datePostedRaw": { "selector": "td:nth-child(6)", "type": "text" }
+        }
+      },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "description": { "selector": ".vacanciesDetails", "type": "html" }
+        }
+      }
+    },
+    {
+      "name": "borninteractive",
+      "baseUrl": "https://borninteractive.zohorecruit.com",
+      "type": "dynamic",
+      "skipDateFilter": true,
+      "listings": {
+        "url": "https://borninteractive.zohorecruit.com/jobs/Careers",
+        "jobCardSelector": "career-website-job-listing-layout1",
+        "fields": {
+          "title": { "selector": "h3 a[href*='/jobs/Careers/']", "type": "text" },
+          "url": { "selector": "h3 a[href*='/jobs/Careers/']", "type": "href" },
+          "location": { "selector": "lyte-text", "type": "text" },
+          "employmentType": { "selector": "span.cw-full-time", "type": "text" }
+        }
+      },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "description": { "selector": ".cw-jobdescription", "type": "html" }
+        }
+      }
+    },
+    {
+      "name": "softrasys",
+      "baseUrl": "https://softrasys.com",
+      "type": "dynamic",
+      "skipDateFilter": true,
+      "listings": {
+        "url": "https://softrasys.com/en/careers",
+        "jobCardSelector": ".base-card",
+        "fields": {
+          "title": { "selector": "h4", "type": "text" },
+          "url": { "selector": "a[href*='/en/careers/']", "type": "href" },
+          "employmentType": { "selector": "div.text-xs.text-gray-600", "type": "text", "index": 1 },
+          "summary": { "selector": "p", "type": "text" }
+        }
+      },
+      "details": {
+        "urlTemplate": "{url}",
+        "fields": {
+          "description": { "selector": ".rich-text-section", "type": "html" }
+        }
+      }
+    }
+  ]
+}

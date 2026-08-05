@@ -1,0 +1,232 @@
+package planner
+
+import (
+	"github.com/Mohammad-y-abbass/moDB/internal/ast"
+)
+
+type PlanNode interface {
+	PlanNode()
+}
+
+type ScanNode struct {
+	TableName string
+}
+
+func (n *ScanNode) PlanNode() {}
+
+type FilterNode struct {
+	Child  PlanNode
+	Left   string
+	Op     string
+	Right  string
+	Right2 string   // upper bound for BETWEEN
+	InList []string // value list for IN
+}
+
+func (n *FilterNode) PlanNode() {}
+
+type ProjectNode struct {
+	Child   PlanNode
+	Columns []string
+}
+
+func (n *ProjectNode) PlanNode() {}
+
+type InsertNode struct {
+	TableName string
+	Columns   []string
+	Values    []string
+}
+
+func (n *InsertNode) PlanNode() {}
+
+type UpdateNode struct {
+	TableName string
+	Sets      map[string]string
+	Where     *ast.WhereClause
+}
+
+func (n *UpdateNode) PlanNode() {}
+
+type DeleteNode struct {
+	TableName string
+	Where     *ast.WhereClause
+}
+
+func (n *DeleteNode) PlanNode() {}
+
+type CreateTableNode struct {
+	TableName string
+	Columns   []ast.ColumnDefinition
+}
+
+func (n *CreateTableNode) PlanNode() {}
+
+type SortNode struct {
+	Child   PlanNode
+	OrderBy []ast.SortExpression
+}
+
+func (n *SortNode) PlanNode() {}
+
+type LimitNode struct {
+	Child  PlanNode
+	Limit  int
+	Offset int
+}
+
+func (n *LimitNode) PlanNode() {}
+
+type DistinctNode struct {
+	Child PlanNode
+}
+
+func (n *DistinctNode) PlanNode() {}
+
+type ShowDatabasesNode struct{}
+
+func (n *ShowDatabasesNode) PlanNode() {}
+
+type ShowTablesNode struct{}
+
+func (n *ShowTablesNode) PlanNode() {}
+
+type DropTableNode struct {
+	TableName string
+}
+
+func (n *DropTableNode) PlanNode() {}
+
+type DropDatabaseNode struct {
+	DatabaseName string
+}
+
+func (n *DropDatabaseNode) PlanNode() {}
+
+type CreateDatabaseNode struct {
+	DatabaseName string
+}
+
+func (n *CreateDatabaseNode) PlanNode() {}
+
+type UseDatabaseNode struct {
+	DatabaseName string
+}
+
+func (n *UseDatabaseNode) PlanNode() {}
+
+// JoinNode represents an INNER JOIN between two tables.
+// LeftKey/RightKey are the qualified column references from the ON clause
+// (e.g., "orders.user_id" and "users.id").
+type JoinNode struct {
+	Left     *ScanNode
+	Right    *ScanNode
+	LeftKey  string           // qualified: "left_table.col"
+	RightKey string           // qualified: "right_table.col"
+	Columns  []string         // projection (empty = *)
+	Where    *ast.WhereClause // optional post-join filter
+}
+
+func (n *JoinNode) PlanNode() {}
+
+type Planner struct{}
+
+func New() *Planner {
+	return &Planner{}
+}
+
+func (p *Planner) GeneratePlan(stmt ast.Statement) PlanNode {
+	switch s := stmt.(type) {
+	case *ast.ShowDatabasesStatement:
+		return &ShowDatabasesNode{}
+	case *ast.ShowTablesStatement:
+		return &ShowTablesNode{}
+	case *ast.DropTableStatement:
+		return &DropTableNode{
+			TableName: s.Table,
+		}
+	case *ast.DropDatabaseStatement:
+		return &DropDatabaseNode{
+			DatabaseName: s.DatabaseName,
+		}
+	case *ast.CreateDatabaseStatement:
+		return &CreateDatabaseNode{
+			DatabaseName: s.DatabaseName,
+		}
+	case *ast.UseDatabaseStatement:
+		return &UseDatabaseNode{
+			DatabaseName: s.DatabaseName,
+		}
+	case *ast.CreateTableStatement:
+		return &CreateTableNode{
+			TableName: s.Table,
+			Columns:   s.Columns,
+		}
+	case *ast.SelectStatement:
+		// JOIN path — produce a JoinNode instead of a ScanNode
+		if s.Join != nil {
+			return &JoinNode{
+				Left:     &ScanNode{TableName: s.Table},
+				Right:    &ScanNode{TableName: s.Join.Table},
+				LeftKey:  s.Join.LeftKey,
+				RightKey: s.Join.RightKey,
+				Columns:  s.Columns,
+				Where:    s.Where,
+			}
+		}
+
+		// Plain SELECT path
+		var node PlanNode = &ScanNode{TableName: s.Table}
+		if s.Where != nil {
+			node = &FilterNode{
+				Child:   node,
+				Left:    s.Where.Left,
+				Op:      s.Where.Op,
+				Right:   s.Where.Right,
+				Right2:  s.Where.Right2,
+				InList:  s.Where.InList,
+			}
+		}
+		if len(s.Columns) > 0 && s.Columns[0] != "*" {
+			node = &ProjectNode{
+				Child:   node,
+				Columns: s.Columns,
+			}
+		}
+		if len(s.OrderBy) > 0 {
+			node = &SortNode{
+				Child:   node,
+				OrderBy: s.OrderBy,
+			}
+		}
+		if s.Limit > 0 || s.Offset > 0 {
+			node = &LimitNode{
+				Child:  node,
+				Limit:  s.Limit,
+				Offset: s.Offset,
+			}
+		}
+		if s.Distinct {
+			node = &DistinctNode{Child: node}
+		}
+		return node
+	case *ast.InsertStatement:
+		return &InsertNode{
+			TableName: s.Table,
+			Columns:   s.Columns,
+			Values:    s.Values,
+		}
+	case *ast.UpdateStatement:
+		return &UpdateNode{
+			TableName: s.Table,
+			Sets:      s.Sets,
+			Where:     s.Where,
+		}
+	case *ast.DeleteStatement:
+		return &DeleteNode{
+			TableName: s.Table,
+			Where:     s.Where,
+		}
+	}
+	return nil
+}

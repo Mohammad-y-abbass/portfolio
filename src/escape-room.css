@@ -1,0 +1,232 @@
+/* ═══════════════════════════════════════════════════════════
+   Escape Room - Cartographer's Study
+   ═══════════════════════════════════════════════════════════ */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", monospace;
+  overflow: hidden;
+  touch-action: none;
+}
+
+#wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+  max-height: 700px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#bezel {
+  padding: 14px 16px 18px;
+  background: linear-gradient(160deg, #0d0f0d, #050605 60%);
+  border-radius: 18px;
+  box-shadow:
+    0 0 0 1px #133318,
+    0 0 40px rgba(57, 255, 106, 0.15),
+    0 40px 90px rgba(0, 0, 0, 0.8),
+    inset 0 0 20px rgba(0, 0, 0, 0.6);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+canvas {
+  background: #010603;
+  border-radius: 4px;
+  cursor: default;
+  outline: none;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
+
+#startOverlay {
+  position: absolute;
+  inset: 14px 16px 18px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(1, 6, 3, 0.85);
+  color: #7dffa0;
+  font-family: "Courier New", monospace;
+  font-size: 16px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 4px;
+  text-shadow: 0 0 8px rgba(57, 255, 106, 0.8);
+}
+
+#startOverlay span {
+  padding: 16px 24px;
+  border: 1px solid #39ff6a;
+  border-radius: 3px;
+  background: rgba(5, 20, 10, 0.6);
+}
+
+#caption {
+  color: #2f8f52;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  text-shadow: 0 0 6px rgba(57, 255, 106, 0.35);
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Mobile Controls */
+#mobileControls {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+  z-index: 20;
+}
+
+#dpad {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(2, 50px);
+  gap: 5px;
+}
+
+#dpad button {
+  width: 50px;
+  height: 50px;
+  background: rgba(5, 20, 10, 0.8);
+  border: 2px solid #39ff6a;
+  border-radius: 8px;
+  color: #7dffa0;
+  font-size: 20px;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#dpad button:active {
+  background: rgba(57, 255, 106, 0.3);
+}
+
+#btnUp {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#btnDown {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#btnLeft {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#btnRight {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#actionButtons {
+  display: flex;
+  gap: 10px;
+}
+
+#actionButtons button {
+  width: 50px;
+  height: 50px;
+  background: rgba(5, 20, 10, 0.8);
+  border: 2px solid #39ff6a;
+  border-radius: 8px;
+  color: #7dffa0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#actionButtons button:active {
+  background: rgba(57, 255, 106, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #wrap {
+    padding: 5px;
+    gap: 8px;
+  }
+
+  #bezel {
+    padding: 8px 10px 12px;
+    border-radius: 12px;
+  }
+
+  #startOverlay {
+    inset: 8px 10px 12px 10px;
+    font-size: 14px;
+  }
+
+  #startOverlay span {
+    padding: 12px 20px;
+  }
+
+  #caption {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  #mobileControls {
+    display: flex;
+  }
+
+  #caption {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  #dpad {
+    grid-template-columns: repeat(3, 45px);
+    grid-template-rows: repeat(2, 45px);
+  }
+
+  #dpad button {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+
+  #actionButtons button {
+    width: 45px;
+    height: 45px;
+    font-size: 14px;
+  }
+}
+

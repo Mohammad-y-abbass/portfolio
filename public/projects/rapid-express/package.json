@@ -1,0 +1,41 @@
+{
+  "name": "@mohammad-abbass/rapid-express",
+  "version": "2.3.0",
+  "description": "Rapidly generate Express.js applications with ease",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create": "index.js"
+  },
+  "keywords": [
+    "express",
+    "expressjs",
+    "node",
+    "nodejs",
+    "web",
+    "web development",
+    "backend",
+    "server",
+    "javascript",
+    "boilerplate",
+    "generator",
+    "scaffolding",
+    "cli",
+    "command-line",
+    "project-setup",
+    "code-generation"
+  ],
+  "author": "Mohammad Abbass",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "cli-progress": "^3.12.0",
+    "colors": "^1.4.0",
+    "commander": "^11.1.0"
+  }
+}
