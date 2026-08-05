@@ -6,8 +6,8 @@ export class StatusBar {
   private dateElement: HTMLElement
   private timeElement: HTMLElement
   private loadBarElement: HTMLElement
-  private clockInterval: number
-  private loadBarInterval: number
+  private clockInterval: number = 0
+  private loadBarInterval: number = 0
 
   constructor() {
     this.dateElement = document.getElementById('sys-date')!

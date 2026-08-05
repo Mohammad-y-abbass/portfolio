@@ -1,6 +1,6 @@
 export class GlitchEffect {
   private glitchLayer: HTMLElement
-  private interval: number
+  private interval: number = 0
 
   constructor() {
     this.glitchLayer = document.querySelector<HTMLElement>('.glitch-layer')!

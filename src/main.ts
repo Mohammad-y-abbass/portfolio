@@ -12,12 +12,17 @@ import { Monitor } from './monitor'
 
 class PortfolioApp {
   private bootSequence: BootSequence
+  // @ts-ignore - Has side effects in constructor
   private navigation: Navigation
   private statusBar: StatusBar
   private glitchEffect: GlitchEffect
+  // @ts-ignore - Has side effects in constructor
   private powerControl: PowerControl
+  // @ts-ignore - Has side effects in constructor
   private konamiEasterEgg: KonamiEasterEgg
+  // @ts-ignore - Has side effects in constructor
   private codeViewer: CodeViewer
+  // @ts-ignore - Has side effects in constructor
   private monitor: Monitor
 
   constructor() {
